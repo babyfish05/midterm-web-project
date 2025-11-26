@@ -189,7 +189,7 @@ nav ul li a:hover {
 }
 
  footer {
-        background-color: #99c8ff; /* Warna latar belakang gelap */
+        background-color:  rgba(142, 194, 255, 0.8); /* Warna latar belakang gelap */
         color: #ffffff; /* Warna teks putih */
         padding: 40px 20px; /* Jarak padding atas dan bawah */
         font-family: sans-serif;
