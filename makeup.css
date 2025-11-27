@@ -49,11 +49,16 @@ nav ul li a {
 nav ul li a:hover {
     color: #7d42f5;
 }
+nav ul li a.active {
+    color: #7d42f5;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
 
 
 /* ======= PRODUCT SECTION ======= */
 .product-section {
-    margin: 30px 40px;
+    margin: 90px 40px 40px;
 }
 
 .product-section h2 {
@@ -66,9 +71,10 @@ nav ul li a:hover {
 /* ======= PRODUCT GRID ======= */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
 }
+
 
 /* ======= PRODUCT CARD ======= */
 .product-card {
@@ -76,11 +82,13 @@ nav ul li a:hover {
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     overflow: hidden;
-    padding: 15px;
+    padding: 12px; /* diperkecil */
     text-align: center;
     transition: 0.3s ease;
     cursor: pointer;
-    position: relative; /* untuk posisi harga & ikon */
+    position: relative;
+    max-width: 260px; /* card lebih kecil */
+    margin: auto;
 }
 
 .product-card:hover {
@@ -90,15 +98,15 @@ nav ul li a:hover {
 /* IMAGE */
 .img-container img {
     width: 100%;
-    height: 240px;
-    object-fit: cover;
+    height: auto;           /* tidak memotong gambar */
+    object-fit: contain;    /* gambar tetap proporsional */
     border-radius: 12px;
 }
 
 /* NAME */
 .name {
     margin-top: 12px;
-    font-size: 16px;
+    font-size: 15px;
     color: #444;
     font-weight: 600;
     padding-bottom: 40px;
@@ -113,12 +121,12 @@ nav ul li a:hover {
     transform: translateY(10px);
     transition: 0.3s ease;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .price {
     left: 15px;
-    color: #111;
+    color: #555;
 }
 
 .cart-icon {
@@ -145,11 +153,13 @@ nav ul li a:hover {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
 @media (max-width: 768px) {
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 @media (max-width: 480px) {
     .product-grid {
         grid-template-columns: 1fr;
