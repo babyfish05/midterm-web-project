@@ -1,0 +1,157 @@
+/* ======= RESET & BODY ======= */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #ffffff;
+}
+
+/* NAVIGATION */
+.navbar {
+    width: 100%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    font-family: 'tan mon cheri';
+
+    background: linear-gradient(
+        90deg,
+        rgba(178, 255, 210, 0.8),
+        rgba(142, 194, 255, 0.8)
+    );
+    backdrop-filter: blur(10px);
+}
+
+.logo img {
+    height: 45px;
+    object-fit: contain;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+nav ul li a:hover {
+    color: #7d42f5;
+}
+
+
+/* ======= PRODUCT SECTION ======= */
+.product-section {
+    margin: 30px 40px;
+}
+
+.product-section h2 {
+    font-size: 28px;
+    font-family: 'tan mon cheri';
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* ======= PRODUCT GRID ======= */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* ======= PRODUCT CARD ======= */
+.product-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s ease;
+    cursor: pointer;
+    position: relative; /* untuk posisi harga & ikon */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGE */
+.img-container img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* NAME */
+.name {
+    margin-top: 12px;
+    font-size: 16px;
+    color: #444;
+    font-weight: 600;
+    padding-bottom: 40px;
+}
+
+/* HARGA & KERANJANG */
+.price,
+.cart-icon {
+    position: absolute;
+    bottom: 15px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.3s ease;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.price {
+    left: 15px;
+    color: #111;
+}
+
+.cart-icon {
+    right: 15px;
+    color: #444;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.cart-icon:hover {
+    color: #7d42f5;
+}
+
+/* HOVER: muncul harga & keranjang */
+.product-card:hover .price,
+.product-card:hover .cart-icon {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
