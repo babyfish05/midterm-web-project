@@ -193,7 +193,7 @@ nav ul li a.active {
 }
 
  footer {
-        background-color:  rgba(142, 194, 255, 0.8); /* Warna latar belakang gelap */
+        background-color:  #B6EDF2; /* Warna latar belakang gelap */
         color: #ffffff; /* Warna teks putih */
         padding: 40px 20px; /* Jarak padding atas dan bawah */
         font-family: sans-serif;
