@@ -5,7 +5,6 @@ body {
     font-family: "Poppins", sans-serif;
     background-color: #ffffff;
 }
-
 /* NAVIGATION */
 .navbar {
     width: 100%;
@@ -65,7 +64,7 @@ nav ul li a.active {
     font-size: 28px;
     font-family: 'tan mon cheri';
     margin-bottom: 25px;
-    color: #333;
+    color: #555;
 }
 
 /* ======= PRODUCT GRID ======= */
