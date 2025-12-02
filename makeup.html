@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Makeup - Somethinc</title>
+    <link rel="icon" href="picture/logo.png" type="image/png" sizes="256x256">
     <link rel="stylesheet" href="makeup.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
-          integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
@@ -16,16 +16,24 @@
     <div class="logo">
         <img src="picture/logo_somethinc3.png" alt="Somethinc Logo">
     </div>
-    <nav>
-       <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="makeup.html" class="active">Make Up</a></li>
-            <li><a href="skincare.html">Skincare</a></li>
-            <li><a href="Bodycare.html">Bodycare</a></li>
-            <li><a href="Tools.html">Tools</a></li>
-            
-        </ul>
-    </nav>
+ <nav>
+   <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="makeup.html" class="active">Make Up</a></li>
+        <li><a href="skincare.html">Skincare</a></li>
+        <li><a href="Bodycare.html">Bodycare</a></li>
+        <li><a href="Tools.html">Tools</a></li>
+
+        <!-- CART NAVIGATION -->
+        <li>
+            <a href="cart.html" class="cart-nav">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </a>
+        </li>
+
+    </ul>
+</nav>
 </header>
 
 <!-- SECTION MAKE UP -->
@@ -37,136 +45,224 @@
         <!-- PRODUCT 1 -->
         <div class="product-card">
             <div class="img-container">
-                <img src="picture1/blush.png" alt="Tinted Sunscreen">
+                <img src="picture1/blush.png" alt="Blush">
             </div>
             <div class="name">Mademoiselle Soft Focus Powder Blush</div>
             <span class="price">Rp 73.000</span>
-            <i class="fa-solid fa-basket-shopping cart-icon"></i>
+            <i class="fa-solid fa-basket-shopping cart-icon"
+               data-name="Mademoiselle Soft Focus Powder Blush"
+               data-price="73000"
+               data-img="picture1/blush.png"></i>
         </div>
 
         <!-- PRODUCT 2 -->
         <div class="product-card">
             <div class="img-container">
-                <img src="picture1/eyebrow.png" alt="Setting Spray">
+                <img src="picture1/eyebrow.png" alt="Eyeliner">
             </div>
             <div class="name">SCANDAL Waterproof Retractable Eyeliner</div>
             <span class="price">Rp 69.000</span>
-            <i class="fa-solid fa-basket-shopping cart-icon"></i>
+            <i class="fa-solid fa-basket-shopping cart-icon"
+               data-name="SCANDAL Waterproof Retractable Eyeliner"
+               data-price="69000"
+               data-img="picture1/eyebrow.png"></i>
         </div>
 
         <!-- PRODUCT 3 -->
         <div class="product-card">
             <div class="img-container">
-                <img src="picture1/eyePallete.png" alt="Lip Gloss">
+                <img src="picture1/eyePallete.png" alt="Eyeshadow">
             </div>
             <div class="name">THE NOBLES Eyeshadow Palette Volume 1</div>
             <span class="price">Rp 136.000</span>
-            <i class="fa-solid fa-basket-shopping cart-icon"></i>
+            <i class="fa-solid fa-basket-shopping cart-icon"
+               data-name="THE NOBLES Eyeshadow Palette Volume 1"
+               data-price="136000"
+               data-img="picture1/eyePallete.png"></i>
         </div>
+
         <!-- PRODUCT 4 -->
         <div class="product-card">
             <div class="img-container">
-                <img src="picture1/gliter.png" alt="mascara">
+                <img src="picture1/gliter.png" alt="Glitter">
             </div>
             <div class="name">Jewel Glitter Liquid</div>
             <span class="price">Rp 85.000</span>
-            <i class="fa-solid fa-basket-shopping cart-icon"></i>
+            <i class="fa-solid fa-basket-shopping cart-icon"
+               data-name="Jewel Glitter Liquid"
+               data-price="85000"
+               data-img="picture1/gliter.png"></i>
         </div>
-         <!-- PRODUCT 5 -->
+
+        <!-- PRODUCT 5 -->
         <div class="product-card">
             <div class="img-container">
-                <img src="picture1/highlighter.png" alt="foundation">
+                <img src="picture1/highlighter.png" alt="Highlighter">
             </div>
             <div class="name">IMMORTAL Highlighter</div>
-            <span class="price">Rp85.000</span>
-            <i class="fa-solid fa-basket-shopping cart-icon"></i>
+            <span class="price">Rp 85.000</span>
+            <i class="fa-solid fa-basket-shopping cart-icon"
+               data-name="IMMORTAL Highlighter"
+               data-price="85000"
+               data-img="picture1/highlighter.png"></i>
         </div>
-         <!-- PRODUCT 6 -->
+
+        <!-- PRODUCT 6 -->
         <div class="product-card">
             <div class="img-container">
-                <img src="picture1/lipbalm.png" alt="Eyeshadow">
+                <img src="picture1/lipbalm.png" alt="Lip Balm">
             </div>
             <div class="name">Ceraplump Tinted Lip Balm SPF25 PA++++</div>
             <span class="price">Rp 89.000</span>
-            <i class="fa-solid fa-basket-shopping cart-icon"></i>
+            <i class="fa-solid fa-basket-shopping cart-icon"
+               data-name="Ceraplump Tinted Lip Balm SPF25 PA++++"
+               data-price="89000"
+               data-img="picture1/lipbalm.png"></i>
         </div>
-         <!-- PRODUCT 7 -->
+
+        <!-- PRODUCT 7 -->
         <div class="product-card">
             <div class="img-container">
-                <img src="picture1/lipGlaze.png" alt="blush">
+                <img src="picture1/lipGlaze.png" alt="Lip Glaze">
             </div>
             <div class="name">Forever Stay Comfort Lip Glaze</div>
             <span class="price">Rp 99.000</span>
-            <i class="fa-solid fa-basket-shopping cart-icon"></i>
+            <i class="fa-solid fa-basket-shopping cart-icon"
+               data-name="Forever Stay Comfort Lip Glaze"
+               data-price="99000"
+               data-img="picture1/lipGlaze.png"></i>
         </div>
-         <!-- PRODUCT 8 -->
+
+        <!-- PRODUCT 8 -->
         <div class="product-card">
             <div class="img-container">
-                <img src="picture1/loosePowder.png" alt="eyeliner">
+                <img src="picture1/loosePowder.png" alt="Loose Powder">
             </div>
-            <div class="name">Holyshield! No Sebum Mineral Blur Translucent Loose Powder SPF39 PA++++</div>
+            <div class="name">Holyshield! No Sebum Mineral Blur Loose Powder</div>
             <span class="price">Rp 99.000</span>
-            <i class="fa-solid fa-basket-shopping cart-icon"></i>
+            <i class="fa-solid fa-basket-shopping cart-icon"
+               data-name="Holyshield! No Sebum Mineral Blur Loose Powder"
+               data-price="99000"
+               data-img="picture1/loosePowder.png"></i>
         </div>
-         <!-- PRODUCT 9 -->
+
+        <!-- PRODUCT 9 -->
         <div class="product-card">
             <div class="img-container">
-                <img src="picture1/McushionCover.png" alt="eyeliner">
+                <img src="picture1/McushionCover.png" alt="Cushion Refill">
             </div>
-            <div class="name">(REFILL) Hooman Breathable UV Cushion Cover SPF35 PA++++</div>
+            <div class="name">(REFILL) Hooman Breathable UV Cushion Cover</div>
             <span class="price">Rp 135.000</span>
-            <i class="fa-solid fa-basket-shopping cart-icon"></i>
+            <i class="fa-solid fa-basket-shopping cart-icon"
+               data-name="(REFILL) Hooman Breathable UV Cushion Cover"
+               data-price="135000"
+               data-img="picture1/McushionCover.png"></i>
         </div>
-         <!-- PRODUCT 10 -->
+
+        <!-- PRODUCT 10 -->
         <div class="product-card">
             <div class="img-container">
-                <img src="picture1/Mpowderfoundation.png" alt="Gliter">
+                <img src="picture1/Mpowderfoundation.png" alt="Powder Foundation">
             </div>
             <div class="name">DNA Airbrush Breathable Powder Foundation</div>
             <span class="price">Rp 129.000</span>
-            <i class="fa-solid fa-basket-shopping cart-icon"></i>
+            <i class="fa-solid fa-basket-shopping cart-icon"
+               data-name="DNA Airbrush Breathable Powder Foundation"
+               data-price="129000"
+               data-img="picture1/Mpowderfoundation.png"></i>
         </div>
-         <!-- PRODUCT 11 -->
+
+        <!-- PRODUCT 11 -->
         <div class="product-card">
             <div class="img-container">
-                <img src="picture1/Mtinted.png" alt="cushion">
+                <img src="picture1/Mtinted.png" alt="Tinted Sunscreen 50ml">
             </div>
-            <div class="name">Copy Paste Tinted Sunscreen SPF 40 PA++++ 50ml</div>
+            <div class="name">Copy Paste Tinted Sunscreen 50ml</div>
             <span class="price">Rp 152.500</span>
-            <i class="fa-solid fa-basket-shopping cart-icon"></i>
+            <i class="fa-solid fa-basket-shopping cart-icon"
+               data-name="Copy Paste Tinted Sunscreen 50ml"
+               data-price="152500"
+               data-img="picture1/Mtinted.png"></i>
         </div>
-         <!-- PRODUCT 12 -->
+
+        <!-- PRODUCT 12 -->
         <div class="product-card">
             <div class="img-container">
-                <img src="picture1/MtintesSunscreen.png" alt="complextion">
+                <img src="picture1/MtintesSunscreen.png" alt="Tinted Sunscreen 10ml">
             </div>
-            <div class="name">Copy Paste Tinted Sunscreen SPF 40 PA++++ 10ml</div>
+            <div class="name">Copy Paste Tinted Sunscreen 10ml</div>
             <span class="price">Rp 47.000</span>
-            <i class="fa-solid fa-basket-shopping cart-icon"></i>
+            <i class="fa-solid fa-basket-shopping cart-icon"
+               data-name="Copy Paste Tinted Sunscreen 10ml"
+               data-price="47000"
+               data-img="picture1/MtintesSunscreen.png"></i>
         </div>
-         <!-- PRODUCT 13 -->
+
+        <!-- PRODUCT 13 -->
         <div class="product-card">
             <div class="img-container">
-                <img src="picture1/settingSpray.png" alt="complextion">
+                <img src="picture1/settingSpray.png" alt="Setting Spray">
             </div>
-            <div class="name">SRSLY Stay Matte Make Up Setting Spray</div>
+            <div class="name">SRSLY Stay Matte Setting Spray</div>
             <span class="price">Rp 42.000</span>
-            <i class="fa-solid fa-basket-shopping cart-icon"></i>
+            <i class="fa-solid fa-basket-shopping cart-icon"
+               data-name="SRSLY Stay Matte Setting Spray"
+               data-price="42000"
+               data-img="picture1/settingSpray.png"></i>
         </div>
-         <!-- PRODUCT 14 -->
+
+        <!-- PRODUCT 14 -->
         <div class="product-card">
             <div class="img-container">
-                <img src="picture1/waterGlass.png" alt="complextion">
+                <img src="picture1/waterGlass.png" alt="Water Gloss">
             </div>
             <div class="name">MULTITASK Water Gloss</div>
             <span class="price">Rp 79.000</span>
-            <i class="fa-solid fa-basket-shopping cart-icon"></i>
+            <i class="fa-solid fa-basket-shopping cart-icon"
+               data-name="MULTITASK Water Gloss"
+               data-price="79000"
+               data-img="picture1/waterGlass.png"></i>
         </div>
-        
-        <!-- Tambahkan produk lain sesuai kebutuhan -->
 
     </div>
 </section>
+<footer>
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h4>INFO</h4>
+            <ul>
+                <li><a href="#">Contact Us : 083186426297</a></li>
+                <li><a href="#">Become Stockist</a></li>
+                <li><a href="#">Stores</a></li>
+                <li><a href="#">Join Our Team</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>ACCOUNT</h4>
+            <ul>
+                <li><a href="#">FAQ, Shipping, & Delivery</a></li>
+                <li><a href="#">Track Order</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>LAYANAN PENGADUAN KONSUMEN</h4>
+            <p>PT Beaute Haul Indonesia</p>
+            <p>WhatsApp: (+62) 813-1000-9066</p>
+            <p>Email: cs@beautyhaul.com</p>
+            <p>Direktorat Jenderal Perlindungan Konsumen Kementerian Perdagangan</p>
+            <p>WhatsApp: (+62) 853-1121-1010</p>
+        </div>
+
+    </div>
+</footer>
+<!-- SCRIPT KERANJANG -->
+<script src="cart.js"></script>
+
 
 </body>
 </html>

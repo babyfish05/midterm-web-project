@@ -1,0 +1,227 @@
+/* ==========================
+   GLOBAL STYLE
+========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f2f6fc;
+    font-family: 'tan mon cheri';
+    color: #333;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+.navbar {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg,
+        rgba(178, 255, 210, 0.8),
+        rgba(142, 194, 255, 0.8)
+    );
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.logo img {
+    height: 50px;
+    object-fit: contain;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #7d42f5;
+}
+
+/* ==========================
+   CHECKOUT LAYOUT
+========================== */
+.checkout-wrapper {
+    width: 90%;
+    max-width: 1300px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    gap: 40px;
+}
+
+/* LEFT SECTION */
+.section-card {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.section-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.section-card input,
+.section-card textarea,
+.section-card select {
+    width: 100%;
+    padding: 14px;
+    margin-top: 6px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    background: #fff;
+    outline: none;
+}
+
+textarea {
+    height: 100px;
+}
+
+/* ==========================
+   RIGHT SECTION SUMMARY
+========================== */
+.checkout-right {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Cart Item List */
+#order-items .item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 15px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #eee;
+}
+
+.item img {
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.qty-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.qty-box button {
+    width: 26px;
+    height: 26px;
+    border: none;
+    border-radius: 6px;
+    background: #eee;
+    cursor: pointer;
+}
+
+/* Remove button */
+.remove-btn {
+    cursor: pointer;
+    color: red;
+    font-size: 18px;
+}
+
+/* DISCOUNT INPUT */
+.discount-box {
+    display: flex;
+    gap: 10px;
+    margin: 18px 0;
+}
+
+.discount-box input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.discount-box button {
+    padding: 12px 18px;
+    background: #b399e6;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* PRICE SUMMARY */
+.price-row,
+.price-total {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+
+.price-total {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 18px;
+}
+
+/* ==========================
+   CHECKOUT BUTTON
+========================== */
+.pay-btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 16px;
+    font-size: 18px;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #b399e6;
+    border: none;     /* FIX garis hitam */
+    outline: none;    /* FIX outline hitam */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+}
+
+.pay-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.pay-btn:active,
+.pay-btn:focus {
+    border: none;
+    outline: none;
+    transform: scale(0.98);
+}
+
+/* CART ICON */
+.cart-icon {
+    font-size: 24px;
+    color: #444;
+    cursor: pointer;
+    display: inline-block;
+}

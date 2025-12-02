@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bodycare - Somethinc</title>
-    <link rel="stylesheet" href="Bodycare.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
-          integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Tools - Somethinc</title>
+    <link rel="icon" href="picture/logo.png" type="image/png" sizes="256x256">
+    <link rel="stylesheet" href="Tools.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 <body>
 
@@ -17,63 +19,119 @@
         <img src="picture/logo_somethinc3.png" alt="Somethinc Logo">
     </div>
     <nav>
-       <ul>
+        <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="makeup.html" >Make Up</a></li>
+            <li><a href="makeup.html">Make Up</a></li>
             <li><a href="skincare.html">Skincare</a></li>
             <li><a href="Bodycare.html">Bodycare</a></li>
             <li><a href="Tools.html" class="active">Tools</a></li>
-            
+
+            <!-- CART NAVIGATION -->
+            <li>
+                <a href="cart.html" class="cart-nav">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
 
-<!-- SECTION Tools UP -->
+<!-- SECTION Tools -->
 <section class="product-section" style="margin-top:120px;">
     <h2>Tools</h2>
-    
+
     <div class="product-grid">
 
-         <!-- PRODUCT 1 -->
+        <!-- PRODUCT 1 -->
         <div class="product-card">
             <div class="img-container">
-                <img src="picture1/tools1.jpg" alt="acne">
+                <img src="picture1/tools1.jpg" alt="Cushion Puff Refill">
             </div>
             <div class="name">Cushion Puff Refill</div>
-            <span class="price">Rp 60.000</span>
-            <i class="fa-solid fa-basket-shopping cart-icon"></i>
+            <span class="price" data-price="60000">Rp. 60.000</span>
+            <i class="fa-solid fa-basket-shopping cart-icon"
+               data-name="Cushion Puff Refill"
+               data-price="60000"
+               data-img="picture1/tools1.jpg"></i>
         </div>
 
         <!-- PRODUCT 2 -->
         <div class="product-card">
             <div class="img-container">
-                <img src="picture1/tools2.jpg" alt="Setting Spray">
+                <img src="picture1/tools2.jpg" alt="Prism Brush">
             </div>
-            <div class="name">Prism Foundation/Liquid Complexion Brush
-</div>
-            <span class="price">Rp 65.000</span>
-            <i class="fa-solid fa-basket-shopping cart-icon"></i>
+            <div class="name">Prism Foundation/Liquid Complexion Brush</div>
+            <span class="price" data-price="65000">Rp. 65.000</span>
+            <i class="fa-solid fa-basket-shopping cart-icon"
+               data-name="Prism Foundation/Liquid Complexion Brush"
+               data-price="65000"
+               data-img="picture1/tools2.jpg"></i>
         </div>
 
         <!-- PRODUCT 3 -->
         <div class="product-card">
             <div class="img-container">
-                <img src="picture1/tools3.jpg" alt="Lip Gloss">
+                <img src="picture1/tools3.jpg" alt="Sharpener">
             </div>
             <div class="name">Sharpener</div>
-            <span class="price">Rp 38.000</span>
-            <i class="fa-solid fa-basket-shopping cart-icon"></i>
+            <span class="price" data-price="38000">Rp. 38.000</span>
+            <i class="fa-solid fa-basket-shopping cart-icon"
+               data-name="Sharpener"
+               data-price="38000"
+               data-img="picture1/tools3.jpg"></i>
         </div>
+
         <!-- PRODUCT 4 -->
         <div class="product-card">
             <div class="img-container">
-                <img src="picture1/tools4.jpg" alt="mascara">
+                <img src="picture1/tools4.jpg" alt="Powder Brush">
             </div>
             <div class="name">Powder Brush</div>
-            <span class="price">Rp 143.000</span>
-            <i class="fa-solid fa-basket-shopping cart-icon"></i>
+            <span class="price" data-price="143000">Rp. 143.000</span>
+            <i class="fa-solid fa-basket-shopping cart-icon"
+               data-name="Powder Brush"
+               data-price="143000"
+               data-img="picture1/tools4.jpg"></i>
         </div>
 
+    </div>
+</section>
+<footer>
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h4>INFO</h4>
+            <ul>
+                <li><a href="#">Contact Us : 083186426297</a></li>
+                <li><a href="#">Become Stockist</a></li>
+                <li><a href="#">Stores</a></li>
+                <li><a href="#">Join Our Team</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>ACCOUNT</h4>
+            <ul>
+                <li><a href="#">FAQ, Shipping, & Delivery</a></li>
+                <li><a href="#">Track Order</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>LAYANAN PENGADUAN KONSUMEN</h4>
+            <p>PT Beaute Haul Indonesia</p>
+            <p>WhatsApp: (+62) 813-1000-9066</p>
+            <p>Email: cs@beautyhaul.com</p>
+            <p>Direktorat Jenderal Perlindungan Konsumen Kementerian Perdagangan</p>
+            <p>WhatsApp: (+62) 853-1121-1010</p>
+        </div>
+
+    </div>
+</footer>
+<script src="cart.js"></script>
 
 </body>
 </html>

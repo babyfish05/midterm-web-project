@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Somethinc - Clay Glowgasm</title>
+    <title>Somethinc - Clay Glowgasm</title>  
+    <!-- FAVICON FIXED (lebih besar & tajam) -->
+    <link rel="icon" href="picture/logo.png" type="image/png" sizes="256x256">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+
 <body>
 
+<!-- NAVBAR -->
 <header class="navbar">
     <div class="logo">
-        <a href="index.html">
-            <img src="picture/logo_somethinc3.png" alt="Somethinc Logo">
-        </a>
+        <img src="picture/logo_somethinc3.png" alt="Somethinc Logo">
     </div>
+
     <nav>
         <ul>
             <li><a href="index.html" class="active">Home</a></li>
@@ -21,84 +26,86 @@
             <li><a href="skincare.html">Skincare</a></li>
             <li><a href="Bodycare.html">Bodycare</a></li>
             <li><a href="Tools.html">Tools</a></li>
-            
+            <li>
+                <a href="cart.html" class="cart-nav">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
 
-
+<!-- HERO SECTION -->
 <section class="hero"></section>
 
+<!-- COLLECTION -->
 <section class="collection-section">
-  <div class="section-header">
-    <h2>Spesial Collection Library</h2>
-  </div>
-
-  <div class="collection-grid">
-      <div class="card">
-      <div class="card-img">
-        <a href="makeup.html">
-        <img src="picture/makeup1..jpg" alt="Product 2">
-        </a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img">
-        <img src="picture/skincare2.jpg" alt="Product 1">
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img">
-        <img src="picture/tools.jpg" alt="Product 3">
-      </div>
+    <div class="section-header">
+        <h2>Spesial Collection Library</h2>
     </div>
 
-    <div class="card">
-      <div class="card-img">
-        <img src="picture/bodycare.jpeg" alt="Product 4">
-      </div>
+    <div class="collection-grid">
+        <div class="card">
+            <div class="card-img">
+                <a href="makeup.html"><img src="picture/makeup1..jpg" alt="Makeup"></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img">
+                <a href="skincare.html"><img src="picture/skincare2.jpg" alt="Skincare"></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img">
+                <a href="Tools.html"><img src="picture/tools.jpg" alt="Tools"></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img">
+                <a href="Bodycare.html"><img src="picture/bodycare.jpeg" alt="Bodycare"></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img">
+                <a href="makeup.html"><img src="picture1/refilCushion.png" alt="Refill Cushion"></a>
+            </div>
+        </div>
     </div>
-    <div class="card">
-      <div class="card-img">
-        <img src="picture1/refilCushion.png" alt="Product 5">
-      </div>
-    </div>
-  </div>
 </section>
-<!-- Menambahka SECTION GRID 2x2 SEPERTI GAMBAR -->
-<div class="container">
 
-    <!-- Gambar kiri -->
+<!-- GRID 2×2 -->
+<div class="container">
     <div class="box image-box">
         <img src="picture/hijau.jpg" alt="Model Skincare">
     </div>
 
-    <!-- Teks kanan atas -->
     <div class="box text-box blue">
         <h2>Stay glowing, stay growing.</h2>
-        <p>Menerapkan perawatan kulit adalah bentuk perhatian pada diri sendiri,  
-           karena tubuh kita pantas mendapatkan perlakuan terbaik.</p>
+        <p>Menerapkan perawatan kulit adalah bentuk perhatian pada diri sendiri.</p>
     </div>
 
-    <!-- Teks kiri bawah -->
     <div class="box text-box green">
         <h2>Healthy skin, happy me</h2>
-        <p>Saat kita merawat kulit dengan baik, kita bukan hanya menjaga penampilan,  
-           tetapi juga merawat rasa percaya diri dari dalam.</p>
+        <p>Merawat kulit meningkatkan rasa percaya diri dari dalam.</p>
     </div>
 
-    <!-- Gambar kanan -->
     <div class="box image-box">
         <img src="picture/biru.jpg" alt="Produk Skincare">
     </div>
-
 </div>
-.
-<!-- gambar bakuchiol -->
+
+<!-- BAKUCHIOL SECTION -->
 <section class="bakuchiol"></section>
 
+<!-- FOOTER -->
 <footer>
     <div class="footer-container">
+
         <div class="footer-section">
             <h4>INFO</h4>
             <ul>
@@ -108,6 +115,7 @@
                 <li><a href="#">Join Our Team</a></li>
             </ul>
         </div>
+
         <div class="footer-section">
             <h4>ACCOUNT</h4>
             <ul>
@@ -117,18 +125,21 @@
                 <li><a href="#">Privacy Policy</a></li>
             </ul>
         </div>
+
         <div class="footer-section">
             <h4>LAYANAN PENGADUAN KONSUMEN</h4>
             <p>PT Beaute Haul Indonesia</p>
             <p>WhatsApp: (+62) 813-1000-9066</p>
             <p>Email: cs@beautyhaul.com</p>
-            <p>Direktorat Jenderal Perlindungan Konsumen dan Tertib Niaga Kementrian Perdagangan Republik Indonesia</p>
+            <p>Direktorat Jenderal Perlindungan Konsumen Kementerian Perdagangan</p>
             <p>WhatsApp: (+62) 853-1121-1010</p>
         </div>
+
     </div>
 </footer>
 
-
 <script src="script.js"></script>
+<script src="cart.js"></script>
+
 </body>
 </html>
