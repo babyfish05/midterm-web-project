@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "Poppins", sans-serif;
+   font-family: 'tan mon cheri';
     background-color: #ffffff;
 }
 /* NAVIGATION */
@@ -162,3 +162,61 @@ nav ul li a.active {
         grid-template-columns: 1fr;
     }
 }
+footer {
+        background-color:  #B6EDF2; /* Warna latar belakang gelap */
+        color: #ffffff; /* Warna teks putih */
+        padding: 40px 20px; /* Jarak padding atas dan bawah */
+        font-family: sans-serif;
+    }
+
+    /* Container untuk menata bagian-bagian footer */
+    .footer-container {
+        display: flex;
+        justify-content: space-between; /* Menempatkan kolom secara merata */
+        max-width: 1200px;
+        margin: 0 auto; /* Menempatkan container di tengah halaman */
+        flex-wrap: wrap; /* Memastikan responsif di layar kecil */
+    }
+
+    /* Styling untuk setiap bagian (kolom) footer */
+    .footer-section {
+        flex: 1; /* Setiap bagian memiliki porsi yang sama */
+        min-width: 250px; /* Lebar minimum untuk responsif */
+        margin: 10px;
+    }
+
+    /* Styling untuk judul (h4) */
+    .footer-section h4 {
+        color: #ffffff;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        border-bottom: 1px solid #007bff; /* Garis bawah biru sebagai aksen */
+        padding-bottom: 10px;
+    }
+
+    /* Styling untuk daftar tautan (ul) */
+    .footer-section ul {
+        list-style: none; /* Menghilangkan bullet point */
+        padding: 0;
+    }
+
+    /* Styling untuk item daftar (li) */
+    .footer-section ul li {
+        margin-bottom: 10px;
+    }
+
+    /* Styling untuk tautan (a) */
+    .footer-section a {
+        color: #ffffff; /* Warna tautan */
+        text-decoration: none; /* Menghilangkan garis bawah tautan */
+    }
+
+    .footer-section a:hover {
+        text-decoration: underline; /* Menambahkan garis bawah saat kursor diarahkan */
+    }
+
+    /* Styling untuk paragraf (p) pada bagian kontak */
+    .footer-section p {
+        margin-bottom: 10px;
+        color: #fffefe;
+    }

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+          integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="picture/logo.png" type="image/png" sizes="256x256">
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+<header class="navbar">
+    <div class="logo">
+        <img src="picture/logo_somethinc3.png" alt="Somethinc Logo">
+    </div>
+ <nav>
+   <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="makeup.html">Make Up</a></li>
+        <li><a href="skincare.html">Skincare</a></li>
+        <li><a href="Bodycare.html">Bodycare</a></li>
+        <li><a href="Tools.html">Tools</a></li>
+
+        <!-- CART NAVIGATION -->
+        <li>
+            <a href="cart.html" class="cart-nav">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </a>
+        </li>
+
+    </ul>
+</nav>
+</header>
+
+<div class="checkout-wrapper">
+
+    <!-- LEFT SIDE -->
+    <div class="checkout-left">
+
+        <h2>Checkout</h2>
+
+        <!-- Customer Details -->
+        <div class="section-card">
+            <h3>Informasi Pembeli</h3>
+
+            <label>Nama Lengkap</label>
+            <input type="text" id="buyer-name" placeholder="Masukkan nama lengkap">
+
+            <label>Email</label>
+            <input type="email" id="buyer-email" placeholder="Masukkan email">
+
+            <label>Nomor Telepon</label>
+            <input type="text" id="buyer-phone" placeholder="Masukkan nomor telepon">
+
+            <label>Alamat Lengkap</label>
+            <textarea id="buyer-address" placeholder="Masukkan alamat lengkap"></textarea>
+
+            <label>Kota / Kabupaten</label>
+            <input type="text" id="buyer-city" placeholder="Masukkan kota/kabupaten">
+
+            <label>Kode Pos</label>
+            <input type="text" id="buyer-postal" placeholder="Masukkan kode pos">
+        </div>
+
+        <!-- Shipping Method -->
+        <div class="section-card">
+            <h3>Metode Pengiriman</h3>
+            <select id="shipping-method">
+                <option value="">Pilih Metode Pengiriman</option>
+                <option value="8000">JNE - Reguler (Rp 8.000)</option>
+                <option value="9000">J&T - Express (Rp 9.000)</option>
+                <option value="7000">SiCepat - Regular (Rp 7.000)</option>
+                <option value="15000">GoSend - Instant (Rp 15.000)</option>
+            </select>
+        </div>
+
+        <!-- Payment Method -->
+        <div class="section-card">
+            <h3>Metode Pembayaran</h3>
+            <select id="payment-method">
+                <option value="">Pilih Metode Pembayaran</option>
+                <option value="cod">Cash On Delivery</option>
+                <option value="transfer">Transfer Bank</option>
+                <option value="ewallet">E-Wallet (OVO / DANA / GoPay)</option>
+                <option value="cc">Kartu Kredit / Debit</option>
+            </select>
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="checkout-right">
+
+        <h3>Ringkasan Pesanan</h3>
+
+        <div id="order-items"></div>
+
+        <!-- DISCOUNT -->
+        <div class="discount-box">
+            <input type="text" id="discount-code" placeholder="Masukkan kode diskon">
+            <button id="apply-discount">Apply</button>
+        </div>
+
+        <!-- TOTAL SUMMARY -->
+        <div class="price-row">
+            <span>Subtotal</span>
+            <span id="subtotal">Rp 0</span>
+        </div>
+        <div class="price-row">
+            <span>Ongkos Kirim</span>
+            <span id="shipping-price">Rp 0</span>
+        </div>
+        <div class="price-row">
+            <span>Pajak</span>
+            <span id="tax">Rp 0</span>
+        </div>
+        <div class="price-row">
+            <span>Diskon</span>
+            <span id="disc-amount">Rp 0</span>
+        </div>
+
+        <div class="price-total">
+            <span>Total</span>
+            <span id="final-total">Rp 0</span>
+        </div>
+
+        <button id="checkout-btn" class="pay-btn">Checkout</button>
+
+    </div>
+
+</div>
+
+<script src="cart.js"></script>
+<script src="card-display.js"></script>
+</body>
+</html>

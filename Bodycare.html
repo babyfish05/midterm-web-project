@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bodycare - Somethinc</title>
+    <link rel="icon" href="picture/logo.png" type="image/png" sizes="256x256">
     <link rel="stylesheet" href="Bodycare.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
-          integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
@@ -17,13 +17,20 @@
         <img src="picture/logo_somethinc3.png" alt="Somethinc Logo">
     </div>
     <nav>
-       <ul>
+        <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="makeup.html" >Make Up</a></li>
+            <li><a href="makeup.html">Make Up</a></li>
             <li><a href="skincare.html">Skincare</a></li>
             <li><a href="Bodycare.html" class="active">Bodycare</a></li>
             <li><a href="Tools.html">Tools</a></li>
-            
+
+            <!-- CART NAVIGATION -->
+            <li>
+                <a href="cart.html" class="cart-nav">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -31,17 +38,20 @@
 <!-- SECTION Bodycare -->
 <section class="product-section" style="margin-top:120px;">
     <h2>Bodycare</h2>
-    
+
     <div class="product-grid">
 
-         <!-- PRODUCT 1 -->
+        <!-- PRODUCT 1 -->
         <div class="product-card">
             <div class="img-container">
-                <img src="picture1/Bodycare1.jpg" alt="acne">
+                <img src="picture1/Bodycare1.jpg" alt="Body Scrub">
             </div>
             <div class="name">Acne Treatment 2% Salicylic Acid Serum</div>
-            <span class="price">Rp 169.000</span>
-            <i class="fa-solid fa-basket-shopping cart-icon"></i>
+            <span class="price" data-price="169000">Rp. 169.000</span>
+            <i class="fa-solid fa-basket-shopping cart-icon"
+               data-name="Acne Treatment 2% Salicylic Acid Serum"
+               data-price="169000"
+               data-img="picture1/Bodycare1.jpg"></i>
         </div>
 
         <!-- PRODUCT 2 -->
@@ -49,30 +59,77 @@
             <div class="img-container">
                 <img src="picture1/Bodycare2.jpg" alt="Setting Spray">
             </div>
-            <div class="name">SRSLY Stay Matte Make Up Setting Spray
-</div>
-            <span class="price">Rp 42.000</span>
-            <i class="fa-solid fa-basket-shopping cart-icon"></i>
+            <div class="name">SRSLY Stay Matte Make Up Setting Spray</div>
+            <span class="price" data-price="42000">Rp. 42.000</span>
+            <i class="fa-solid fa-basket-shopping cart-icon"
+               data-name="SRSLY Stay Matte Make Up Setting Spray"
+               data-price="42000"
+               data-img="picture1/Bodycare2.jpg"></i>
         </div>
 
         <!-- PRODUCT 3 -->
         <div class="product-card">
             <div class="img-container">
-                <img src="picture1/Bodycare3.jpg" alt="Lip Gloss">
+                <img src="picture1/Bodycare3.jpg" alt="MULTITASK Water Gloss">
             </div>
             <div class="name">MULTITASK Water Gloss</div>
-            <span class="price">Rp 79.000</span>
-            <i class="fa-solid fa-basket-shopping cart-icon"></i>
+            <span class="price" data-price="79000">Rp. 79.000</span>
+            <i class="fa-solid fa-basket-shopping cart-icon"
+               data-name="MULTITASK Water Gloss"
+               data-price="79000"
+               data-img="picture1/Bodycare3.jpg"></i>
         </div>
+
         <!-- PRODUCT 4 -->
         <div class="product-card">
             <div class="img-container">
-                <img src="picture1/Bodycare4.jpg" alt="mascara">
+                <img src="picture1/Bodycare4.jpg" alt="HANGOVER Mascara">
             </div>
             <div class="name">HANGOVER Voluminous Fiber Lash Smudgeproof Mascara</div>
-            <span class="price">Rp 85.000</span>
-            <i class="fa-solid fa-basket-shopping cart-icon"></i>
+            <span class="price" data-price="85000">Rp. 85.000</span>
+            <i class="fa-solid fa-basket-shopping cart-icon"
+               data-name="HANGOVER Voluminous Fiber Lash Smudgeproof Mascara"
+               data-price="85000"
+               data-img="picture1/Bodycare4.jpg"></i>
         </div>
+
+    </div>
+</section>
+<footer>
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h4>INFO</h4>
+            <ul>
+                <li><a href="#">Contact Us : 083186426297</a></li>
+                <li><a href="#">Become Stockist</a></li>
+                <li><a href="#">Stores</a></li>
+                <li><a href="#">Join Our Team</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>ACCOUNT</h4>
+            <ul>
+                <li><a href="#">FAQ, Shipping, & Delivery</a></li>
+                <li><a href="#">Track Order</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>LAYANAN PENGADUAN KONSUMEN</h4>
+            <p>PT Beaute Haul Indonesia</p>
+            <p>WhatsApp: (+62) 813-1000-9066</p>
+            <p>Email: cs@beautyhaul.com</p>
+            <p>Direktorat Jenderal Perlindungan Konsumen Kementerian Perdagangan</p>
+            <p>WhatsApp: (+62) 853-1121-1010</p>
+        </div>
+
+    </div>
+</footer>
+<script src="cart.js"></script>
 
 </body>
 </html>
