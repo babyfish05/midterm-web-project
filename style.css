@@ -389,6 +389,47 @@ nav ul li a.active {
 .product-card .cart-icon:hover {
     color: #7d42f5;
 }
+.produk-features {
+    padding: 40px 7%;
+    background: #fff;
+}
+
+/* Baris */
+.produk-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
+}
+
+/* TEXT BOX */
+.produk-row .text-box {
+    max-width: 350px;
+}
+
+.produk-row .text-box h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 12px;
+}
+
+.produk-row .text-box p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* IMAGE BOX */
+.produk-row .image-box img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+}
+
 
 /* === RESPONSIVE === */
 @media (max-width: 1200px) {
